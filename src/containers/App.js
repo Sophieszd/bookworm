@@ -4,7 +4,7 @@ import BookList from "../../src/components/BookList";
 
 function App() {
   return (
-    <h1></h1>
+    <h1 className={styles.header}>Book Worm</h1>
   );
 }
 
