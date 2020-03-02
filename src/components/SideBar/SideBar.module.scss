@@ -1,0 +1,9 @@
+.SideBar {
+    color: red;
+    border: 2px solid black;
+    width: 20%;
+
+    @media screen and (max-width: 768px) {
+        width: unset;
+    }
+}

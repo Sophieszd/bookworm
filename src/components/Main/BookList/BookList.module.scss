@@ -1,0 +1,11 @@
+.BookList {
+    border: 2px solid red;
+    width: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 30px;
+    padding: 30px;
+    
+}

@@ -1,3 +1,3 @@
-import Book from "./Book";
+import SideBar from "./SideBar";
 
-export default Book;
+export default SideBar;

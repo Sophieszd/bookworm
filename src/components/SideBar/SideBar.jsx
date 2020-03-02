@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import styles from "./SideBar.module.scss";
-import firebase, { firebase } from "../../firebase";
+// import firebase, { firebase } from "../../firebase";
 
 class SideBar extends Component {
-    // render() {
-    //     return (
-    //         <section></section>
-    //     )
-    // }
+    render() {
+        return (
+            <section className={styles.SideBar}>
+                <p>SideBar</p>
+            </section>);
+    }
 }
 
 export default SideBar;
