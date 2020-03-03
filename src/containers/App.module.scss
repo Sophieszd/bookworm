@@ -1,8 +1,19 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap');
+
+* {
+  font-family: 'Libre Baskerville', serif;
+  text-align: center;
+  background-color: #233D4D;
+  color: white;
+}
+
+.Container {
   display: flex;
+  flex-direction: row;
   width: 100vw;
   height: 100vh;
-  
+  margin: 0;
+
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }

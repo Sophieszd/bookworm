@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import styles from "./Main.module.scss";
 // import firebase, { firebase } from "../../firebase";
+import Book from "./BookList/Book/Book";
 
-class Main extends Component {
+export default class Main extends Component {
     render() {
         return (
             <section className={styles.Main}>
-                <p>Main</p>
+                <Book />
             </section>);
     }
 }
-
-export default Main;
