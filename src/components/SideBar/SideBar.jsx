@@ -6,7 +6,8 @@ class SideBar extends Component {
     render() {
         return (
             <section className={styles.SideBar}>
-                <p>SideBar</p>
+                <p>Menu</p>
+                <p>Number of Books in Catalogue:</p>
             </section>);
     }
 }

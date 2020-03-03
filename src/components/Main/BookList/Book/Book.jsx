@@ -9,7 +9,11 @@ class BookComponent extends Component {
         return (
             <article className={styles.Book}>
                 <h3>{this.props.bookData.title}</h3>
-                {/* <img className={styles.image} alt="Book image" src={require("../../static/image" + bookData.image)}> */}
+                <img
+                className={styles.image}
+                alt="Book image"
+                src={this.props.bookData.image}
+              />
                 <p>{this.props.bookData.author}</p>
                 <p>Page Count: {bookData.pageCount}</p>
             </article>

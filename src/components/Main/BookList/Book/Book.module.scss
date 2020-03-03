@@ -1,3 +1,10 @@
 .Book {
-    border: solid black 2px;
+    border: solid white 2px;
+    padding: 20px;
+
+    .image {
+        height: 260px;
+        width: 160px;
+        margin: 20px;
+    }
 }
