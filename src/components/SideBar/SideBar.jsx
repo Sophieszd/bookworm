@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styles from "./SideBar.module.scss";
+import SearchBar from "../Main/BookList/SearchBar";
 // import firebase, { firebase } from "../../firebase";
 
 class SideBar extends Component {
@@ -8,6 +9,7 @@ class SideBar extends Component {
             <section className={styles.SideBar}>
                 <p>Menu</p>
                 <p>Number of Books in Catalogue:</p>
+                {/* <SearchBar /> */}
             </section>);
     }
 }

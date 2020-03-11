@@ -1,12 +1,27 @@
 import React, { Component } from "react";
 import styles from "./BookList.module.scss";
 import Book from "./Book";
+import SearchBar from "./SearchBar";
 // import data from "../../../static/data/data";
 import firebase, { firestore } from "../../../firebase";
 
 export default class BookList extends Component {
     state = {
-        books: []
+        books: [],
+        searchText: "",
+        filteredBooks: []
+    }
+
+    setSearchText = (event) => {
+        const searchText = event.target.value;
+        this.setState({ searchText }, this.filterBooks);
+    }
+
+    filterBooks = () => {
+        let filteredBooks = this.state.books.filter(book => {
+            return book.name.includes(this.state.searchText);
+        })
+        this.setState({ filteredBooks })
     }
 
     componentDidMount() {
@@ -15,19 +30,24 @@ export default class BookList extends Component {
             .get()
             .then((query) => {
                 const books = query.docs.map(doc => doc.data());
-                this.setState({ books });
+                this.setState({ 
+                    books: books,
+                    filteredBooks: books
+                 });
                 console.log(books)
             })
     }
 
     render() {
         return (
-            <section className={styles.books}>
-                {this.state.books.map((book, index) => (
-                    <Book bookData={book} key={index} />
-                ))}
-            </section>
-
+            <>
+                <SearchBar searchText={this.state.searchText} setSearchText={this.setSearchText} />
+                <section className={styles.books}>
+                    {this.state.books.map((book, index) => (
+                        <Book bookData={book} key={index} />
+                    ))}
+                </section>
+            </>
         )
     }
 }
