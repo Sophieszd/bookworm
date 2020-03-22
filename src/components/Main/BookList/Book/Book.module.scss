@@ -1,10 +1,21 @@
-.Book {
+// Variables
+
+$card-width: 300px;
+$card-height: $card-width * 3.5 / 2.5;
+$picture-width: 100px;
+$picture-height: $picture-width * 3.5 / 2.5;
+
+.book {
     border: solid white 2px;
+    height: $card-height;
+    width: $card-width;
+    min-width: $card-width;
+    perspective: 600px;
     padding: 20px;
 
     .image {
-        height: 120px;
-        width: 80px;
+        height: $picture-height;
+        width: $picture-width;
         margin: 20px;
     }
 }

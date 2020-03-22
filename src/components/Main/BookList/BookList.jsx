@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import styles from "./BookList.module.scss";
 import Book from "./Book";
 import SearchBar from "./SearchBar";
-// import data from "../../../static/data/data";
 import firebase, { firestore } from "../../../firebase";
 
 export default class BookList extends Component {
@@ -19,7 +18,7 @@ export default class BookList extends Component {
 
     filterBooks = () => {
         let filteredBooks = this.state.books.filter(book => {
-            return book.name.includes(this.state.searchText);
+            return book.title.includes(this.state.searchText);
         })
         this.setState({ filteredBooks })
     }
@@ -43,7 +42,7 @@ export default class BookList extends Component {
             <>
                 <SearchBar searchText={this.state.searchText} setSearchText={this.setSearchText} />
                 <section className={styles.books}>
-                    {this.state.books.map((book, index) => (
+                    {this.state.filteredBooks.map((book, index) => (
                         <Book bookData={book} key={index} />
                     ))}
                 </section>

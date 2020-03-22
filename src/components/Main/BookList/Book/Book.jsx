@@ -7,7 +7,7 @@ class BookComponent extends Component {
     render() {
         const bookData = this.props.bookData;
         return (
-            <article className={styles.Book}>
+            <article className={styles.book}>
                 <h3>{this.props.bookData.title}</h3>
                 <img
                 className={styles.image}
