@@ -1,8 +1,14 @@
 import React, { Component } from "react";
-import styles from "./Book.module.scss";
+import styles from "./Header.module.scss";
 
-class HeaderComponent extends Component {
+export default class Header extends Component {
 
+    render() {
+        return ( 
+            <section>
+            <h1 className={styles.header}>Well Read</h1>
+            <p>A place to curate booklists, keep track of your reading and find new literary gems.</p>
+            </section>
+        )};
 }
 
-export default HeaderComponent;

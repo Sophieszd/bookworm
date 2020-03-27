@@ -1,21 +1,33 @@
 import React, { Component } from "react";
 import styles from "./Book.module.scss";
-import bookData from "../../../../static/data/data";
-// import Card from 'react-bootstrap/Card';
 
 class BookComponent extends Component {
+
+    get title() {
+        const dataTitle = this.props.bookData.volumeInfo.title;
+        return dataTitle.length > 23
+          ? dataTitle.substring(0, 20) + "..." 
+          : dataTitle;
+    }
+
     render() {
-        const bookData = this.props.bookData;
+        const bookData = this.props.bookData.volumeInfo;
         return (
             <article className={styles.book}>
-                <h3>{this.props.bookData.title}</h3>
                 <img
                 className={styles.image}
                 alt="Book image"
-                src={this.props.bookData.image}
+                src= {(bookData.imageLinks != null) 
+                    ? bookData.imageLinks.smallThumbnail
+                    : "Image not available"}
               />
-                <p>{this.props.bookData.author}</p>
+                <p className={styles.title}> {this.title}</p>
+                <p> {bookData.authors}</p>
                 <p>Page Count: {bookData.pageCount}</p>
+                <p>Genre: {(bookData.categories != null)
+                        ? bookData.categories
+                        : "N/A"}
+                </p>
             </article>
         )
     }

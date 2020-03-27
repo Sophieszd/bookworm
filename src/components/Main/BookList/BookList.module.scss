@@ -1,12 +1,18 @@
 .books {
     border-left: 2px solid white;
-    width: 80%;
+    width: 100%;
     height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-gap: 30px;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr; 
+    // grid-gap: 30px;
     padding: 30px;  
     // display: flex;
     // flex-wrap: wrap;
     justify-content: space-evenly; 
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.h3 {
+    font-size: 30px;
 }

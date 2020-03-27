@@ -4,40 +4,35 @@ import Book from "./Book";
 import SearchBar from "./SearchBar";
 import firebase, { firestore } from "../../../firebase";
 
+
+
 export default class BookList extends Component {
     state = {
         books: [],
         searchText: "",
-        filteredBooks: []
+        filteredBooks: [],
+        url: `https://www.googleapis.com/books/v1/volumes/`
     }
 
     setSearchText = (event) => {
+        event.preventDefault();
         const searchText = event.target.value;
-        this.setState({ searchText }, this.filterBooks);
+        this.setState({ searchText }, this.fetchBooks);
     }
 
-    filterBooks = () => {
-        let filteredBooks = this.state.books.filter(book => {
-            return book.title.includes(this.state.searchText);
-        })
-        this.setState({ filteredBooks })
-    }
-
-    componentDidMount() {
-        firestore
-            .collection("books")
-            .get()
-            .then((query) => {
-                const books = query.docs.map(doc => doc.data());
-                this.setState({ 
-                    books: books,
-                    filteredBooks: books
-                 });
-                console.log(books)
+    fetchBooks() {
+        fetch(`${this.state.url}?q=${this.state.searchText}&key=AIzaSyDMym1dMT591Z1reIhDlZSfVKctxMmuuDM&maxResults=40`)
+            .then((response) => response.json())
+            .then((data) => {
+                this.setState({
+                    books: data.items,
+                    filteredBooks: data.items
+                });
             })
     }
 
     render() {
+        console.log(this.state);
         return (
             <>
                 <SearchBar searchText={this.state.searchText} setSearchText={this.setSearchText} />
@@ -50,15 +45,3 @@ export default class BookList extends Component {
         )
     }
 }
-
-// export default class BookList extends Component {
-    
-//     render() {
-//         return (
-//             <section className={styles.BookList}>
-//                 {data.map((book, index) => (
-//                     <Book bookData={book} key={index} />
-//                 ))}
-//             </section>
-//         )
-

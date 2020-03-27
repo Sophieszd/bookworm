@@ -12,10 +12,16 @@ $picture-height: $picture-width * 3.5 / 2.5;
     min-width: $card-width;
     perspective: 600px;
     padding: 20px;
+    margin: 20px;
 
     .image {
         height: $picture-height;
         width: $picture-width;
         margin: 20px;
+    }
+
+    .title {
+        font-weight: bold;
+        font-size: 20px;
     }
 }

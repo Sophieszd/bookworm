@@ -5,6 +5,7 @@
   text-align: center;
   background-color: #233D4D;
   color: white;
+  max-width: 100%;
 }
 
 .Container {
@@ -13,6 +14,14 @@
   width: 100vw;
   height: 100vh;
   margin: 0;
+
+  // .sidebar {
+  //   width: 30%;
+  // }
+
+  // .main {
+  //   width: 70%;
+  // }
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
