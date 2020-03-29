@@ -1,13 +1,24 @@
 import React, { Component } from "react";
 import styles from "./Book.module.scss";
 
-class BookComponent extends Component {
+export default class BookComponent extends Component {
 
     get title() {
         const dataTitle = this.props.bookData.volumeInfo.title;
         return dataTitle.length > 23
           ? dataTitle.substring(0, 20) + "..." 
           : dataTitle;
+    }
+
+    get authorSpacing() {
+        const authors = this.props.bookData.volumeInfo.authors;
+        addSpace = (authors) => {
+            for (i = 0; i < authors.length; i++) {
+                if(author[i] == " ") {
+                    authors.push("&nbsp;");
+                }
+            }
+        }
     }
 
     render() {
@@ -22,8 +33,8 @@ class BookComponent extends Component {
                         ? bookData.imageLinks.smallThumbnail
                         : "Image not available"}
                     />
-              </section>
-              <section className={styles.info}>
+                </section>
+                <section className={styles.info}>
                     <p className={styles.title}> {this.title}</p>
                     <p className={styles.authors}> {bookData.authors}</p>
                     <p>Page Count: {bookData.pageCount}</p>
@@ -37,4 +48,3 @@ class BookComponent extends Component {
     }
     
 }
-export default BookComponent;
