@@ -1,7 +1,22 @@
-.SideBar {
+.NavList {
     color:white;
-    width: 20%;
+    max-width: 100%;
     background-color: #233D4D;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+    text-align: center;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #4885ed;
+        text-decoration: none;
+        transition: 0.2;
+    }
 
     @media screen and (max-width: 768px) {
         width: unset;

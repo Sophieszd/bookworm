@@ -14,20 +14,24 @@ class BookComponent extends Component {
         const bookData = this.props.bookData.volumeInfo;
         return (
             <article className={styles.book}>
-                <img
-                className={styles.image}
-                alt="Book image"
-                src= {(bookData.imageLinks != null) 
-                    ? bookData.imageLinks.smallThumbnail
-                    : "Image not available"}
-              />
-                <p className={styles.title}> {this.title}</p>
-                <p> {bookData.authors}</p>
-                <p>Page Count: {bookData.pageCount}</p>
-                <p>Genre: {(bookData.categories != null)
-                        ? bookData.categories
-                        : "N/A"}
-                </p>
+                <section className={styles.cover}>
+                    <img
+                    className={styles.image}
+                    alt="Book image"
+                    src= {(bookData.imageLinks != null) 
+                        ? bookData.imageLinks.smallThumbnail
+                        : "Image not available"}
+                    />
+              </section>
+              <section className={styles.info}>
+                    <p className={styles.title}> {this.title}</p>
+                    <p className={styles.authors}> {bookData.authors}</p>
+                    <p>Page Count: {bookData.pageCount}</p>
+                    <p>Genre: {(bookData.categories != null)
+                            ? bookData.categories
+                            : "N/A"}
+                    </p>
+                </section>
             </article>
         )
     }

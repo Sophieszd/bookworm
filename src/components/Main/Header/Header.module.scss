@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    // margin: 20px 475px;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+
+    .one {
+        // border: 2px solid white;
+        height: 45px;
+        width: 45px;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        color:  #233D4D;
+        display: flex;
+        border: 1px solid #233D4D;
+    }
+
+    .two {
+        // border: 2px solid white;
+        height: 45px;
+        width: 45px;
+        justify-content: center;
+        align-items: center;
+        background-color: #4885ed;
+        color:  #233D4D;
+        // color: white;
+        display: flex;
+        border: 1px solid #233D4D;
+
+    }
+
+}
+
+.subtitle {
+   margin: 40px 0 15px 0;    
+}

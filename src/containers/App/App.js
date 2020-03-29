@@ -11,12 +11,12 @@ export default class App extends Component {
     render() {
       return (
         <section>
-        <Header />
-        <div  className={styles.Container}>
-          <SideBar className={styles.sidebar}/>
-          <Main className={styles.main}/>
-          <Routes />
-        </div>
+          {/* <SideBar className={styles.sidebar}/>
+          <Header /> */}
+          <div className={styles.Container}>
+            {/* <Main className={styles.main}/> */}
+            <Routes />
+          </div>
         </section>
 
     );

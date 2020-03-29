@@ -1,20 +1,33 @@
 // Variables
 
-$card-width: 300px;
-$card-height: $card-width * 3.5 / 2.5;
-$picture-width: 100px;
-$picture-height: $picture-width * 3.5 / 2.5;
+$card-width: 350px;
+// $card-height: $card-width * 3.5 / 2.5;
+$card-height: 220px;
+$picture-width: 120px;
+$picture-height: 200px;
+// $picture-height: $picture-width * 3.5 / 2.5;
 
 .book {
     border: solid white 2px;
     height: $card-height;
     width: $card-width;
-    min-width: $card-width;
+    max-width: $card-width;
     perspective: 600px;
     padding: 20px;
     margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 10px;
+
+    .info {
+        border: solid 2px white;
+        width: 200px;
+        height: 200px;
+    }
 
     .image {
+        border: solid 2px white;
         height: $picture-height;
         width: $picture-width;
         margin: 20px;
@@ -23,5 +36,8 @@ $picture-height: $picture-width * 3.5 / 2.5;
     .title {
         font-weight: bold;
         font-size: 20px;
+    }
+    .authors {
+        font-size: 15px;
     }
 }

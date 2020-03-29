@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import styles from "./SideBar.module.scss";
+import NavItem from "./NavItem";
+import SignIn from "./SignIn";
+import { Nav } from "react-bootstrap";
 // import SearchBar from "../Main/BookList/SearchBar";
 // import firebase, { firebase } from "../../firebase";
 
@@ -7,17 +10,15 @@ export default class SideBar extends Component {
     render() {
         return (
             <section className={styles.SideBar}>
-                <p>Menu</p>
                 <div>
-                    <div onClick={this.props.signIn} className={styles.google}>
-                        <button>Sign In with Google</button>
+                    <ul className={styles.NavList}>
+                        {/* <SignIn route="/signin" name="Sign in with Google" /> */}
+                        <NavItem route="/home" name="Home" />
+                        <NavItem route="/signin" name="Sign In" onClick={this.props.signIn} />
+                        <NavItem route="/mydashboard" name="My Dashboard" />
+                        {/* <NavItem route="/currentlyreading" name="Currently Reading" /> */}
+                    </ul>
                     </div>
-                    <button>Sign Out with Google</button>
-                    <p>Favourites</p>
-                    <p>Currently Reading</p>
-                    <p>Past Reads</p>
-                    <p>Future Reads</p>
-                </div>
             </section>);
     }
 }

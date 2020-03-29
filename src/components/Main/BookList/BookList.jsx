@@ -27,21 +27,24 @@ export default class BookList extends Component {
                 this.setState({
                     books: data.items,
                     filteredBooks: data.items
-                });
-            })
+            });
+        })
+        .catch(error => {
+            console.log(error)
+        })
     }
 
     render() {
         console.log(this.state);
         return (
-            <>
-                <SearchBar searchText={this.state.searchText} setSearchText={this.setSearchText} />
+            <div>
+                <SearchBar className={styles.searchbar} searchText={this.state.searchText} setSearchText={this.setSearchText} />
                 <section className={styles.books}>
                     {this.state.filteredBooks.map((book, index) => (
-                        <Book bookData={book} key={index} />
+                <Book bookData={book} key={index} />
                     ))}
                 </section>
-            </>
+            </div>
         )
     }
 }
