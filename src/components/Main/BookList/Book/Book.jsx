@@ -10,16 +10,16 @@ export default class BookComponent extends Component {
           : dataTitle;
     }
 
-    get authorSpacing() {
-        const authors = this.props.bookData.volumeInfo.authors;
-        addSpace = (authors) => {
-            for (i = 0; i < authors.length; i++) {
-                if(author[i] == " ") {
-                    authors.push("&nbsp;");
-                }
-            }
-        }
-    }
+    // get authorSpacing() {
+    //     const authors = this.props.bookData.volumeInfo.authors;
+    //     addSpace = (authors) => {
+    //         for (i = 0; i < authors.length; i++) {
+    //             if(author[i] == " ") {
+    //                 authors.push("&nbsp;");
+    //             }
+    //         }
+    //     }
+    // }
 
     render() {
         const bookData = this.props.bookData.volumeInfo;
