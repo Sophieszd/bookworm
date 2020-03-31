@@ -2,13 +2,13 @@ import firebase from "firebase";
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
-    apiKey: "AIzaSyC4fVmEHVH96X4zrs5a_uVcPiR68vFw7b8",
-    authDomain: "book-worm-cbb06.firebaseapp.com",
-    databaseURL: "https://book-worm-cbb06.firebaseio.com",
-    projectId: "book-worm-cbb06",
-    storageBucket: "book-worm-cbb06.appspot.com",
-    messagingSenderId: "185889340651",
-    appId: "1:185889340651:web:021451c3284f46d4c512ae"
+    apiKey: "AIzaSyCBtdUACw585CVYpO079zE05tvuOBigy2E",
+    authDomain: "well-read-bfcfd.firebaseapp.com",
+    databaseURL: "https://well-read-bfcfd.firebaseio.com",
+    projectId: "well-read-bfcfd",
+    storageBucket: "well-read-bfcfd.appspot.com",
+    messagingSenderId: "141750563446",
+    appId: "1:141750563446:web:790d5b7db90a58167ee557"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);

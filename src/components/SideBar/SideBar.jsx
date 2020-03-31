@@ -15,7 +15,8 @@ export default class SideBar extends Component {
                         {/* <SignIn route="/signin" name="Sign in with Google" /> */}
                         <NavItem route="/home" name="Home" />
                         <NavItem route="/signin" name="Sign In" onClick={this.props.signIn} />
-                        <NavItem route="/mydashboard" name="My Dashboard" />
+                        <NavItem route="/private/mydashboard" name="My Dashboard" />
+                        <NavItem route="/favourites" name="Favourites" />
                         {/* <NavItem route="/currentlyreading" name="Currently Reading" /> */}
                     </ul>
                     </div>

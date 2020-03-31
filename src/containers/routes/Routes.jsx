@@ -39,14 +39,15 @@ export default class Routes extends Component {
 
     render() {
         return (
-            <Router>
+            <Router primary={false}>
                 <Redirect noThrow from="/" to="signin" />
                 <Main path="home" />
                 <SignIn path="signin" signIn={this.signIn}/>
-                <PrivateRoutes path="myreads" user={this.state.user}>
+                
+                <PrivateRoutes path="private" user={this.state.user}>
                     <MyDashboard path="mydashboard" user={this.state.user} signOut={this.signOut} />
                 </PrivateRoutes>
-                {/* <NotFound default /> */}
+                <NotFound default />
             </Router>
         )
     }

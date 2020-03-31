@@ -10,6 +10,13 @@ export default class BookComponent extends Component {
           : dataTitle;
     }
 
+    get author() {
+        const dataAuthor = this.props.bookData.volumeInfo.author;
+        return dataAuthor.length > 20
+          ? dataAuthor.substring(0, 15) + "..." 
+          : dataAuthor;
+    }
+
     // get authorSpacing() {
     //     const authors = this.props.bookData.volumeInfo.authors;
     //     addSpace = (authors) => {
@@ -43,6 +50,8 @@ export default class BookComponent extends Component {
                             : "N/A"}
                     </p>
                 </section>
+
+                
             </article>
         )
     }

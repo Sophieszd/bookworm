@@ -1,15 +1,19 @@
+// .SideBar {
+//     border-bottom: 0.5px solid #4885ed;
+// }
+
 .NavList {
     color:white;
     max-width: 100%;
     background-color: #233D4D;
     display: flex;
     justify-content: space-evenly;
-    margin: 10px;
+    margin: 20px;
     text-align: center;
 
     a {
         color: white;
-        text-decoration: none;
+        // text-decoration: none;
     }
 
     a:hover {
@@ -21,9 +25,4 @@
     @media screen and (max-width: 768px) {
         width: unset;
     }
-}
-
-button {
-    margin: 20px;
-
 }

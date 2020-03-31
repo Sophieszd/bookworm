@@ -11,8 +11,8 @@ export default class App extends Component {
     render() {
       return (
         <section>
-          {/* <SideBar className={styles.sidebar}/>
-          <Header /> */}
+          <SideBar className={styles.sidebar}/>
+          <Header />
           <div className={styles.Container}>
             {/* <Main className={styles.main}/> */}
             <Routes />

@@ -10,8 +10,8 @@ export default class Main extends Component {
     render() {
         return (
             <section className={styles.Main}>
-                <SideBar className={styles.sidebar}/>
-                <Header />
+                {/* <SideBar className={styles.sidebar}/>
+                <Header /> */}
                 <BookList />
             </section>);
     }

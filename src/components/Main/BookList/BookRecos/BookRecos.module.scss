@@ -1,0 +1,58 @@
+$card-width: 350px;
+$card-height: 220px;
+$picture-width: 120px;
+$picture-height: 180px;
+
+.books {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.book {
+    box-sizing: border-box;
+    height: $card-height;
+    width: $card-width;
+    max-width: $card-width;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 10px;
+    background-color: rgb(45, 76, 95);
+    box-shadow: 20px rgb(20, 58, 80);
+    border-radius: 2px;
+    letter-spacing: 1px;
+
+    .info {
+        background-color:rgb(45, 76, 95);
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .image {
+        background-color:rgb(45, 76, 95);
+        height: $picture-height;
+        width: $picture-width;
+        margin: auto;
+    }
+
+    .title {
+        font-weight: bold;
+        font-size: 15px;
+        // color: #4885ed;
+        
+    }
+    .authors {
+        font-size: 12px;
+        color: #4885ed;
+    }
+
+    p {
+        background-color: rgb(45, 76, 95);
+    }
+}

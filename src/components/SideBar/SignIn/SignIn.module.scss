@@ -14,7 +14,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    align-content: centre;
+    // align-content: center;
     border: solid 2px #4885ed;
     // width: 40%;
     // max-width: 100vw;
@@ -29,6 +29,7 @@
         border: none;
         border-radius: 10px;
         color:  #233D4D;
+        // margin: 20px;
         
 
             &:hover {

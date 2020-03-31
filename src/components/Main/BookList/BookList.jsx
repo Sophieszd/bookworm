@@ -3,6 +3,7 @@ import styles from "./BookList.module.scss";
 import Book from "./Book";
 import SearchBar from "./SearchBar";
 import firebase, { firestore } from "../../../firebase";
+import BookRecos from "./BookRecos";
 
 
 
@@ -25,8 +26,7 @@ export default class BookList extends Component {
             .then((response) => response.json())
             .then((data) => {
                 this.setState({
-                    books: data.items,
-                    filteredBooks: data.items
+                    books: data.items || []
             });
         })
         .catch(error => {
@@ -40,9 +40,17 @@ export default class BookList extends Component {
             <div>
                 <SearchBar className={styles.searchbar} searchText={this.state.searchText} setSearchText={this.setSearchText} />
                 <section className={styles.books}>
-                    {this.state.filteredBooks.map((book, index) => (
-                <Book bookData={book} key={index} />
+                    {this.state.books.map((book, index) => (
+                        <Book bookData={book} key={index} />
+                        // if(searchText) {
+
+                        // }
                     ))}
+                </section>
+
+                <section>
+                    <p>Well Read's Suggested Books</p>
+                    <BookRecos className={styles.books} />
                 </section>
             </div>
         )

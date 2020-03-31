@@ -1,0 +1,21 @@
+* {
+    text-align: center;
+    justify-content: center;
+    // align-items: center;
+   
+}
+
+.google {
+    background-color:  #4885ed;
+    border: none;
+    border-radius: 10px;
+    color:  #233D4D;
+    // margin: 20px;
+    
+
+        &:hover {
+            color: white;
+            text-decoration: none;
+            transition: 0.2;
+        }
+}

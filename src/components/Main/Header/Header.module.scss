@@ -6,14 +6,12 @@
     display: flex;
     flex-direction: row;
     text-align: center;
-    // margin: 20px 475px;
     font-size: 30px;
     justify-content: center;
     align-items: center;
-    margin: 40px 0 20px 0;
+    margin: 28px 0 0 0;
 
     .one {
-        // border: 2px solid white;
         height: 45px;
         width: 45px;
         justify-content: center;
@@ -25,21 +23,18 @@
     }
 
     .two {
-        // border: 2px solid white;
         height: 45px;
         width: 45px;
         justify-content: center;
         align-items: center;
         background-color: #4885ed;
         color:  #233D4D;
-        // color: white;
         display: flex;
         border: 1px solid #233D4D;
-
     }
-
 }
 
 .subtitle {
-   margin: 40px 0 0px 0;    
+   margin: 20px 0 0px 0;    
+   font-size: 13px;
 }
