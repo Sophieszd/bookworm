@@ -1,3 +1,11 @@
+# Well-Read
+
+Book search site built in React, using state & props, react routing and getting data from Google books API.  
+Google Authentication for sign-in/sign-out, favorites page and reading list features are in development.
+
+Link to live site: https://well-read-bfcfd.firebaseapp.com/signin
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
